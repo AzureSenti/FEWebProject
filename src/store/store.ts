@@ -1,0 +1,11 @@
+import { configureStore } from '@reduxjs/toolkit';
+
+
+export const store = configureStore({
+    reducer: {
+        // (Reducer của bạn sẽ nằm ở đây, ví dụ: cart: cartReducer)
+    },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
