@@ -11,7 +11,6 @@ export interface ICategory {
     description?: string;
     parent_id?: string;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     parent?: ICategory;
     children?: ICategory[];
 }
@@ -34,10 +33,9 @@ export interface IProduct {
     created_at: string;
     updated_at: string;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     category?: ICategory;
     reviews?: IProductReview[];
-    suppliers?: ISupplier[]; // Từ bảng product_supplier
+    suppliers?: ISupplier[];
 }
 
 export interface IProductReview {
@@ -50,7 +48,6 @@ export interface IProductReview {
     last_edited_at?: string;
     visibility_status: TReviewVisibility;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     party?: Pick<IParty, 'party_id' | 'full_name'>; // Thông tin người viết
     replies?: IReviewReply[];
     moderation?: IReviewModeration;
@@ -65,7 +62,6 @@ export interface IReviewReply {
     created_at: string;
     is_from_staff?: boolean;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     party?: Pick<IParty, 'party_id' | 'full_name'>;
 }
 
@@ -79,7 +75,6 @@ export interface IReviewModeration {
     created_at: string;
     decided_at?: string;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     moderator?: Pick<IEmployee, 'party_id' | 'full_name'>;
 }
 

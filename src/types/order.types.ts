@@ -1,5 +1,4 @@
 import {
-    TOrderAddressType,
     TOrderStatus,
     TPaymentStatus,
     TShipmentStatus,
@@ -9,7 +8,6 @@ import { IProduct } from './product.types';
 
 export interface IOrderAddress {
     order_id: string;
-    address_type: TOrderAddressType;
     receiver_name: string;
     receiver_phone: string;
     line1: string;
@@ -28,8 +26,7 @@ export interface IOrderLine {
     line_discount: number;
     line_total: number;
 
-    // Dữ liệu lồng nhau BE CẦN trả về:
-    // Thông tin cơ bản của sản phẩm tại thời điểm đặt hàng
+
     product?: Pick<IProduct, 'product_id' | 'product_name' | 'sku' | 'description'>;
 }
 
@@ -65,7 +62,7 @@ export interface IOrder {
     grand_total: number;
     notes?: string;
 
-    // Dữ liệu lồng nhau BE CẦN trả về:
+
     order_lines: IOrderLine[]; // Quan trọng nhất
     payments?: IPayment[];
     shipments?: IShipment[];

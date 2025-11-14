@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-
+import cartReducer from './slices/cartSlice';
+import productReducer from './slices/productSlice';
 
 export const store = configureStore({
     reducer: {
-        // (Reducer của bạn sẽ nằm ở đây, ví dụ: cart: cartReducer)
+        cart: cartReducer,
+        products: productReducer,
     },
 });
 
