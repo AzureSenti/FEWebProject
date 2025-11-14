@@ -1,4 +1,3 @@
-// src/store/slices/productSlice.ts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { IApiState, IProduct } from '../../types';
 import { productApi } from '../../api/productAPI';

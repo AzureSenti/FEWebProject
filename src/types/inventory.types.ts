@@ -11,7 +11,7 @@ export interface IStockMovement {
     movement_id: string;
     product_id: string;
     warehouse_id: string;
-    quantity_delta: number; // Số âm (bán) hoặc số dương (nhập)
+    quantity_delta: number;
     reason: TStockMovementReason;
     occurred_at: string;
     reference_no?: string;
@@ -26,7 +26,6 @@ export interface IGoodsReceipt {
     total_cost?: number;
     notes?: string;
 
-    // Dữ liệu lồng nhau BE có thể trả về:
     supplier?: ISupplier;
     lines?: IGoodsReceiptLine[];
 }

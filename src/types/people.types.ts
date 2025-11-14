@@ -1,19 +1,19 @@
-import { TAddressType, TAccountProvider, TAccountStatus } from './common.types';
+import { TAccountProvider, TAccountStatus } from './common.types';
 
 export interface IParty {
-    party_id: string; // BIGINT -> string
+    party_id: string;
     full_name: string;
     email?: string;
     phone?: string;
-    birth_date?: string; // DATE -> string
+    birth_date?: string;
     note?: string;
-    created_at: string; // TIMESTAMP -> string
+    created_at: string;
     updated_at: string;
 }
 
 export interface ICustomer extends IParty {
     tier?: string;
-    points: number; // INT -> number
+    points: number;
 }
 
 export interface IEmployee extends IParty {
@@ -21,7 +21,7 @@ export interface IEmployee extends IParty {
     hire_date?: string;
     status?: string;
 
-    // Dữ liệu lồng nhau BE có thể trả về
+
     roles?: IRole[];
 }
 
@@ -33,7 +33,6 @@ export interface IRole {
 export interface IAddress {
     address_id: string;
     party_id: string;
-    address_type: TAddressType;
     line1: string;
     line2?: string;
     ward?: string;
@@ -52,7 +51,6 @@ export interface IAccount {
     provider_user_id?: string;
     username?: string;
     email_for_login?: string;
-    // password_hash?: string; // Tuyệt đối không bao giờ nhận trường này về FE
     account_status: TAccountStatus;
     created_at: string;
     last_login_at?: string;

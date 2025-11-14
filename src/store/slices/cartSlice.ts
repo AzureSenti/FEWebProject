@@ -24,7 +24,6 @@ const cartSlice = createSlice({
                 state.items.push({ product: product, quantity: 1 });
             }
         },
-        // Action để xóa sản phẩm
         removeItem: (state, action: PayloadAction<string>) => { // payload là productId
             state.items = state.items.filter(
                 (item) => item.product.product_id !== action.payload
