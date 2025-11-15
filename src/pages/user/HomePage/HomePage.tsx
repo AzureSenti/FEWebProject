@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { fetchProducts } from '../../store/slices/productSlice';
-import { addItem } from '../../store/slices/cartSlice';
-import { IProduct } from '../../types';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { fetchProducts } from '../../../store/slices/productSlice';
+import { addItem } from '../../../store/slices/cartSlice';
+import { IProduct } from '../../../types';
+
+import './HomePage.css'
 
 export const HomePage: React.FC = () => {
 

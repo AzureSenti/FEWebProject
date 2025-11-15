@@ -1,8 +1,8 @@
 // src/components/features/product/ProductCard.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IProduct } from '../../../types';
-import { Button } from '../../ui/button/Button';
+import { IProduct } from '../../../../types';
+import { Button } from '../../../ui/button/Button';
 
 const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('vi-VN', {

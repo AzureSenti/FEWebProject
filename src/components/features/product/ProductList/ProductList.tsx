@@ -1,8 +1,8 @@
 import React from 'react';
-import { IProduct } from '../../../types';
-import { ProductCard } from './ProductCard';
-import { useAppDispatch } from '../../../store/hooks';
-import { addItem } from '../../../store/slices/cartSlice';
+import { IProduct } from '../../../../types';
+import { ProductCard } from '../ProductCard/ProductCard';
+import { useAppDispatch } from '../../../../store/hooks';
+import { addItem } from '../../../../store/slices/cartSlice';
 
 interface ProductListProps {
     products: IProduct[]; // Chỉ nhận mảng sản phẩm

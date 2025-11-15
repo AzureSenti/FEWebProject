@@ -1,13 +1,14 @@
-// src/pages/ProductListPage.tsx
 import React, { useEffect } from 'react';
-import {Spinner} from "../../components/ui/loading/Spinner";
-import { fetchProducts } from '../../store/slices/productSlice';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import {IProduct} from "../../types";
-import { addItem } from '../../store/slices/cartSlice';
-import {Button} from "../../components/ui/button/Button";
-import {ProductCard} from "../../components/features/product/ProductCard";
-import {ProductList} from "../../components/features/product/ProductList";
+import {Spinner} from "../../../components/ui/loading/Spinner";
+import { fetchProducts } from '../../../store/slices/productSlice';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import {IProduct} from "../../../types";
+import { addItem } from '../../../store/slices/cartSlice';
+import {Button} from "../../../components/ui/button/Button";
+import {ProductCard} from "../../../components/features/product/ProductCard/ProductCard";
+import {ProductList} from "../../../components/features/product/ProductList/ProductList";
+
+import './ProductListPage.css'
 
 
 
