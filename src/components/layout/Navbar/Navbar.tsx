@@ -1,4 +1,5 @@
 import React from 'react';
+import './navbar.css';
 
 interface NavbarProps {
     logo?: React.ReactNode;
@@ -7,7 +8,7 @@ interface NavbarProps {
 }
 
 
-export const Navbar: React.FC<NavbarProps> = ({ logo, links, actions }) => {
+export function Navbar({ logo, links, actions }: NavbarProps) {
     return (
         <nav className="navbar">
             <div className="container navbar-container">

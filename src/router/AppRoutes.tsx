@@ -1,11 +1,10 @@
 // src/router/AppRoutes.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { MainLayout } from '../components/layout/MainLayout';
+import { MainLayout } from '../components/layout/MainLayout/MainLayout';
 import { HomePage } from '../pages/user/HomePage';
 import { ProductListPage } from '../pages/user/ProductListPage';
 // import { ProductDetailPage } from '../pages/ProductDetailPage'; // Sẽ thêm sau
-//import { MainLayout } from '../components/layout/MainLayout';
 
 export const AppRoutes: React.FC = () => {
     return (
@@ -14,6 +13,5 @@ export const AppRoutes: React.FC = () => {
                 <Route index element={<HomePage />} />
                 <Route path="products" element={<ProductListPage />} />
             </Route>
-
         </Routes>    );
 };
