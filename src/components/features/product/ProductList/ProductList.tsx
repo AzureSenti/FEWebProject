@@ -5,7 +5,7 @@ import { useAppDispatch } from '../../../../store/hooks';
 import { addItem } from '../../../../store/slices/cartSlice';
 
 interface ProductListProps {
-    products: IProduct[]; // Chỉ nhận mảng sản phẩm
+    products: IProduct[];
 }
 
 export const ProductList: React.FC<ProductListProps> = ({ products }) => {
